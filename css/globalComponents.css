@@ -1,0 +1,235 @@
+:root {
+    --paragraph: calc(6px + 12 * (100vw / 1326));
+    --paragraph_title: calc(12px + 14 *(100vw / 1326));
+    --sub_paragraph: calc(4px + 12 * (100vw / 1326)) ;
+}
+body {
+    background-color: #e0dbd2;
+    font-family: georgia,serif;
+}
+/*Контакты*/
+.main-contact {
+    margin-top: calc(70px + 80 * (100vw / 1326));
+    text-align: center;
+    font-family: "Gill Sans", sans-serif;
+    font-size: var(--paragraph);
+}
+    .contact-call {
+        font-size: var(--paragraph_title);
+    }
+/*/Контакты*/
+.main-journalism {
+    padding: 40px 190px 0 190px;
+}
+    .main-journalism-text-heading {
+        text-align: center;
+        font-size: var(--paragraph_title);
+        line-height: 3;
+    }
+        .main-journalism-text {
+            font-size: var(--paragraph);
+            line-height: 1.6;
+        }
+/**/
+/*Журналистика*/
+.slider_wrapper {
+    text-align: center;
+}
+.slider {
+    position: relative;
+}
+.slider .slick-arrow {
+    position: absolute;
+    z-index: 1;
+    top: 45%;
+    font-size: 0;
+    width: 20px;
+    height: 40px;
+    border: none;
+}
+.slider .slick-arrow.slick-prev {
+    left: 0;
+    background: url("../img/sl-arrow_l.svg") 0 0 / 100% no-repeat;
+}
+.slider .slick-arrow.slick-prev:active {
+    width: 21px;
+    height: 41px;
+    background: url("../img/sl-arrow_l_click.svg") 0 0 / 100% no-repeat;
+}
+.slider .slick-arrow.slick-next {
+    right: 0;
+    background: url("../img/sl-arrow_r.svg") 0 0 / 100% no-repeat;
+}
+.slider .slick-arrow.slick-next:active {
+    width: 21px;
+    height: 41px;
+    background: url("../img/sl-arrow_r_click.svg") 0 0 / 100% no-repeat;
+}
+.slider-item img{
+    max-height: 522px;
+}
+.slick-track {
+    display: flex;
+}
+.slick-list {
+    overflow: hidden;
+}
+/*Журналистика закрывается*/
+/*Композиторство*/
+.container {
+    padding: 60px 120px;
+}
+h2 {
+    text-align: center;
+    font-size: var(--paragraph_title);
+}
+.about_title {
+    padding-bottom: 20px;
+}
+.about_text {
+    font-size: var(--paragraph);
+}
+.gallery_image {
+    overflow-x: scroll;
+    white-space:nowrap;
+}
+.gallery_image img {
+    display: inline-block;
+    width: 880px;
+    height: 560px;
+}
+/*композиторство - аудио*/
+.song_library {
+    display: none;
+    padding-top: 50px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.song_library[style*="display: block"] {
+    display: flex !important;
+}
+audio {
+    width: 426px;
+    height: 30px;
+    transition: height 1s;
+}
+    audio::-webkit-media-controls-panel {
+        background-color: gray;
+        transition: background-color 0.5s;
+    }
+    audio:focus::-webkit-media-controls-panel {
+        background-color: darkgray;
+        transition: background-color 0.5s;
+    }
+.song_item {
+    padding-top: 40px;
+}
+.song_title_self, .song_text {
+    text-align: center;
+}
+.song_subtext, .notes_subtext {
+    text-align: center;
+    font-size: 14px;
+}
+.song_subtext:hover, .notes_subtext:hover {
+    text-decoration: underline;
+}
+.song_title {
+    position: relative;
+    cursor: pointer;
+}
+/*video*/
+.video_title {
+    padding-bottom: 40px;
+}
+.video_library {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.video_item {
+    padding: 20px 10px;
+}
+.notes_title {
+    padding-bottom: 40px;
+}
+.notes_pdf, .book_photo_gallery_body, .publishing_okno_body_content, .publishing_goman_body_content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.book_photo_gallery_body_var1 {
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.book_pdf_item_var1 {
+    padding: 20px 10px;
+    transition: 0.3s ease-in-out;
+
+}
+.book_pdf_item_var1:hover {
+    transition: 0.3s ease-in-out;
+    background-color: white;
+}
+.notes_item, .book_pdf_item {
+    padding: 20px 10px;
+    transition: 0.3s ease-in-out;
+    max-width: 240px;
+}
+.notes_item:hover, .book_pdf_item:hover {
+    transition: 0.3s ease-in-out;
+    background-color: white;
+}
+.notes_item:active, .book_pdf_item:active {
+    transition: 0.3s;
+    background-color: #a9a7a7;
+}
+/*Композиторство закрывается*/
+/*Литературная */
+
+.book_gallery_item, .goman_body_application_item {
+    padding-top: 60px;
+    overflow-x: auto;
+    white-space:nowrap;
+}
+.book_gallery_item img, .goman_body_application_item img {
+    display: inline-block;
+    width: 273px;
+    height: 340px;
+}
+/*Издательская*/
+.publishing_okno_body {
+    padding-bottom: 40px;
+}
+.book_publishing_goman {
+    padding-bottom: 60px;
+}
+.publishing_goman_body_content>img, .publishing_okno_body_content>img, .publishing_talent_body_content>img {
+    padding: 20px 10px;
+    max-width: 240px;
+    max-height: 340px;
+}
+.publishing_okno_body_title, .publishing_goman_body_title, .publishing_talent_body_title {
+    padding-bottom: 40px;
+}
+.publishing_goman_body_content {
+    padding-bottom: 40px;
+}
+.book_pdf_title, .gallery_app_title {
+    padding-bottom: 40px;
+}
+/*Social*/
+.book_gallery_title_social {
+    padding-bottom: 40px;
+}
+.social_pdf_item_title {
+    text-align: center;
+    font-size: 17px;
+    padding-top: 5px;
+
+}
+.subtext {
+    font-size: 18px;
+}

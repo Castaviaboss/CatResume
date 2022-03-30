@@ -1,0 +1,133 @@
+:root {
+    --paragraph: calc(6px + 12 * (100vw / 1326));
+    --paragraph_title: calc(12px + 14 *(100vw / 1326));
+    --sub_paragraph: calc(4px + 12 * (100vw / 1326)) ;
+}
+
+body {
+    background-color: #f1ede5 /*#eae5dc*/;
+    font-family: georgia,serif;
+}
+.main-background-image img{
+    max-width: 100%;
+    max-height: 100%;
+    border-bottom: 30px solid #eae5dc;
+}
+/*БЛОК ГЛАВНОЙ СТРАНИЦЫ СЛАЙДЕР*/
+#slider figure img {
+    width: 16.665%;
+    float: left;
+}
+#slider figure {
+    width: 600%;
+    left: 0;
+    position: relative;
+    animation: slider 30s linear infinite;
+}
+#slider {
+    overflow: hidden;
+}
+@keyframes slider {
+     0% {left: 0}
+     5% {left: 0}
+     10% {left: 0}
+     15% {left: 0}
+     20% {left: 0}
+     25% {left: -100%}
+     30% {left: -100%}
+     35% {left: -100%}
+     40% {left: -100%}
+     45% {left: -100%}
+     50% {left: 0}
+     55% {left: 0}
+     60% {left: 0}
+     65% {left: 0}
+     70% {left: 0}
+     75% {left: -100%}
+     80% {left: -100%}
+     85% {left: -100%}
+     90% {left: -100%}
+     95% {left: -100%}
+     100% {left: 0}
+ }
+/*БЛОК СТРАНИЦЫ ОБО МНЕ*/
+.main-about_me {
+    padding: 60px 120px;
+}
+    .main-about_me-text {
+        font-size: var(--paragraph);
+        margin-bottom: 72px;
+    }
+        .main-about_me-text h2 {
+            text-align: center;
+            font-size: var(--paragraph_title);
+        }
+/*БЛОК С ФОТО ИЗ ЖИЗНИ И ОПИСАНИЕМ И СЛАЙДЕРОМ*/
+.slider {
+    position: relative;
+    text-align: center;
+}
+.slider .slick-arrow {
+    position: absolute;
+    z-index: 1;
+    top: 45%;
+    font-size: 0;
+    width: 20px;
+    height: 40px;
+    border: none;
+
+}
+.slider .slick-arrow.slick-prev {
+    left: 0;
+    background: url("../img/sl-arrow_l.svg") 0 0 / 100% no-repeat;
+}
+    .slider .slick-arrow.slick-prev:active {
+        width: 21px;
+        height: 41px;
+        background: url("../img/sl-arrow_l_click.svg") 0 0 / 100% no-repeat;
+    }
+.slider .slick-arrow.slick-next {
+    right: 0;
+    background: url("../img/sl-arrow_r.svg") 0 0 / 100% no-repeat;
+}
+    .slider .slick-arrow.slick-next:active {
+        width: 21px;
+        height: 41px;
+        background: url("../img/sl-arrow_r_click.svg") 0 0 / 100% no-repeat;
+    }
+.slider-item img{
+    height: 480px;
+}
+.slider-item>p {
+    padding: 0 30px 0 30px;
+    font-size: var(--sub_paragraph) ;
+}
+.slick-track {
+    display: flex;
+}
+.slick-list {
+    overflow: hidden;
+}
+/*БЛОК СТРАНИЦЫ С КНИГАМИ*/
+.main-book {
+    padding: 0 120px 0 120px;
+    margin-bottom: 42px;
+}
+    .main-book-text {
+        font-size: var(--paragraph);
+        margin-bottom: 26px;
+    }
+        .main-book-text h2{
+            text-align: center;
+            font-size: var(--paragraph_title);
+        }
+/*БЛОК С ОБЛОЖКАМИ КНИГ И ГОРИЗОНТАЛЬНО-ПРОКРУЧИВАЕМЫМ КОНТЕЙНЕРОМ*/
+    .main-book-photo {
+        overflow-x: scroll;
+        white-space:nowrap;
+    }
+        .main-book-photo-gallery img{
+            display: inline-block;
+            width: 273px;
+            height: 340px;
+        }

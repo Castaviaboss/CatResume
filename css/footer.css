@@ -1,0 +1,12 @@
+.footer {
+    max-height: 30px;
+    min-height: 30px;
+
+    background-color: #d7cfc5;
+    color: #000000;
+}
+    .footer-text-author {
+        font-size: 10px;
+        text-align: center;
+        padding-top: 10px;
+    }
